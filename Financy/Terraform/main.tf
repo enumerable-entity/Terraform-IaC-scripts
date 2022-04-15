@@ -20,5 +20,5 @@ data "terraform_remote_state" "network" {
   }
 }
 output "newwork-state" {
-  value = data.terraform_remote_state.network.outputs.vpc_id  # value interchange through outputs in tfstate file. One person make outputs, another read outputs from tfstate file in s3
+  value = data.terraform_remote_state.network.outputs  # value interchange through outputs in tfstate file. One person make outputs, another read outputs from tfstate file in s3
 }
