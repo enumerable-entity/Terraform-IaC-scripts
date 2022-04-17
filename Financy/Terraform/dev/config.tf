@@ -12,13 +12,13 @@ terraform {
       name = "Terraform-IaC-scripts"
     }
   }
-#   backend "s3" {
-#     bucket = "terraform-state-enumerable-entity"
-#     key    = "financy/dev"
-#     region = var.default_region
-#   }
+  #   backend "s3" {
+  #     bucket = "terraform-state-enumerable-entity"
+  #     key    = "financy/dev"
+  #     region = var.default_region
+  #   }
 }
 
 provider "aws" {
-  region = "eu-central-1"
+  region = var.region
 }
