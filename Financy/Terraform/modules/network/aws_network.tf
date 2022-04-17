@@ -10,3 +10,11 @@ resource "aws_vpc" "financy_vpc" {
       "Environment" = var.environment
     }
 }
+
+resource "aws_internet_gateway" "financy_gateway" {
+  vpc_id = aws_vpc.financy_vpc.id
+  tags = {
+      "Name" = "${var.internet_gateway_name}-gateway"
+      "Environment" = var.environment
+    }
+}

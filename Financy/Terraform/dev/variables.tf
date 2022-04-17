@@ -28,3 +28,7 @@ variable "vpc_enable_dns_hostnames" {
   type        = bool
   description = " A boolean flag to enable/disable DNS hostnames in the VPC"
 }
+variable "internet_gateway_name" {
+  type        = string
+  description = "Internet gateway for VPC for Internet access"
+}

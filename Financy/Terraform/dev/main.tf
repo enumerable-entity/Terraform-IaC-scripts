@@ -2,7 +2,7 @@
 # Author: Enumerable-entity 
 # Writed for be under Free Tier usage on AWS
 
-module "aws_vpc" {
+module "aws_network" {
   source                   = "../modules/network"
   environment              = var.environment
   vpc_name                 = var.vpc_name
@@ -10,4 +10,5 @@ module "aws_vpc" {
   vpc_instance_tenancy     = var.vpc_instance_tenancy
   vpc_enable_dns_support   = var.vpc_enable_dns_support
   vpc_enable_dns_hostnames = var.vpc_enable_dns_hostnames
+  internet_gateway_name    = var.internet_gateway_name
 }
