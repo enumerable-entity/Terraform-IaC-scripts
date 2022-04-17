@@ -32,3 +32,7 @@ variable "internet_gateway_name" {
   type        = string
   description = "Internet gateway for VPC for Internet access"
 }
+variable "private_subnets_cidr_list" {
+  type        = list(any)
+  description = "List of CIDR's for creating subnets"
+}
