@@ -2,6 +2,10 @@ variable "environment" {
     type = string
     description = "Environment : dev, prod, stage etc"
 }
+variable "project_name" {
+      type = string
+    description = "Project name"
+}
 variable "vpc_cidr_block" {
     type = string
     description = "CIDR block for created VPC"
@@ -26,11 +30,23 @@ variable "internet_gateway_name" {
   type = string
   description = "Internet gateway for VPC for Internet access"
 }
-variable "private_subnets_cidr_list" {
+variable "subnets_cidr_list" {
   type = list
   description = "List of CIDR's for creating subnets"
 }
 variable "availability_zones_list" {
     type = list
   description = "List of AZ in which subnets will be created"
+}
+variable "public_allowed_port_list_map" {
+  type = map
+  description = "Map of public allowed ports list to env "
+}
+variable "admin_allowed_port_list_map" {
+  type = map
+  description = "Map of admin asscess allowed ports list to env "
+}
+variable "admin_ip_cidr" {
+  type        = string
+  description = "Admin IP adress for admin Sec group access restriction"
 }
