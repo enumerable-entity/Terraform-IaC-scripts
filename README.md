@@ -1,7 +1,5 @@
 # Terraform-IaC-scripts
-
-___
-## Terraform script for my Pet project "Financy"
+## Project "Financy"
 ___
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -12,6 +10,10 @@ ___
 
 #### Work in progress
 
+## Visualization of the infrastructure created by code
+
+<h3 align="center">Network module</h3>
+<img src="https://enumerable-entity.s3.eu-central-1.amazonaws.com/terraform_netw_module.png"/>
 
 ## Contact
 [My GitHub](https://github.com/enumerable-entity/)
