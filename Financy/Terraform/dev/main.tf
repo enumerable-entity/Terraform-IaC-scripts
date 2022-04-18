@@ -16,9 +16,24 @@ module "aws_network" {
   public_allowed_port_list_map = var.public_allowed_port_list_map
   admin_allowed_port_list_map  = var.admin_allowed_port_list_map
   admin_ip_cidr                = var.admin_ip_cidr
-  project_name =  var.project_name
+  project_name                 = var.project_name
+}
+
+module "aws_instance" {
+  source       = "../modules/instance"
+  environment  = var.environment
+  project_name = var.project_name
 }
 
 data "aws_availability_zones" "available_zones" {
   state = "available"
+}
+
+data "aws_ami" "ubuntu_server_ami" {
+  owners = ["099720109477"]
+  filter {
+    name = "name"
+    #free tier Ubuntu image
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20211129"]
+  }
 }

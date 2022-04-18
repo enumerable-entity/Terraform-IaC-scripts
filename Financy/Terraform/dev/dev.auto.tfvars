@@ -18,4 +18,8 @@ admin_allowed_port_list_map = {
   "dev"  = ["8080", "3306", "22", ]
 }
 admin_ip_cidr = "91.150.0.0/16"
-project_name = "financy"
+project_name  = "financy"
+#===============================================
+
+#AWS instance vars
+
