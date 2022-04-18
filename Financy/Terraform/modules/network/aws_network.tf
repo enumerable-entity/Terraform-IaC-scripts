@@ -10,7 +10,6 @@ resource "aws_vpc" "financy_vpc" {
       "Environment" = var.environment
     }
 }
-
 resource "aws_internet_gateway" "financy_gateway" {
   depends_on = [aws_vpc.financy_vpc]
   vpc_id = aws_vpc.financy_vpc.id
@@ -58,7 +57,6 @@ resource "aws_main_route_table_association" "main_route_table" {
   vpc_id         = aws_vpc.financy_vpc.id
   route_table_id = aws_route_table.financy_public_route_table.id
 }
-
 resource "aws_security_group" "public_security_group" {
   name        = "${var.environment}-${var.project_name}-public-sec-group"
   description = "Public access to VPC"
